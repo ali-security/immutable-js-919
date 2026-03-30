@@ -12,11 +12,12 @@ var options = {
   target: typescript.ScriptTarget.ES2015,
   module: typescript.ModuleKind.CommonJS,
   strictNullChecks: true,
+  allowJs: true,
 };
 
 module.exports = {
   process(src, path) {
-    if (path.endsWith('.ts') || path.endsWith('.tsx')) {
+    if (path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.js')) {
       return typescript.transpile(src, options, path, []);
     }
     return src;

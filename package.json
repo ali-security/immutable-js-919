@@ -50,7 +50,7 @@
       "ts"
     ],
     "transform": {
-      "^.+\\.ts$": "<rootDir>/resources/jestPreprocessor.js"
+      "^.+\\.(ts|js)$": "<rootDir>/resources/jestPreprocessor.js"
     },
     "testRegex": "/__tests__/.*\\.(ts|js)$",
     "unmockedModulePathPatterns": [
